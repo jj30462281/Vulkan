@@ -410,8 +410,8 @@ class VEmbeds:
 
     def CARA_COROA(self, result: str) -> Embed:
         embed = Embed(
-            title='Cara Coroa',
-            description=f'Result: {result}',
+            title='正面 還是 反面',
+            description=f'結果: {result}',
             colour=self.__colors.GREEN
         )
         return embed

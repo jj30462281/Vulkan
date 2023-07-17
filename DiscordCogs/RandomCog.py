@@ -38,9 +38,9 @@ class RandomCog(Cog):
     async def cara(self, ctx: Context) -> None:
         x = random()
         if x < 0.5:
-            result = 'cara'
+            result = '正面'
         else:
-            result = 'coroa'
+            result = '反面'
 
         embed = self.__embeds.CARA_COROA(result)
         await ctx.send(embed=embed)
