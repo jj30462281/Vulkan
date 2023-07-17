@@ -67,7 +67,7 @@ class ControlCog(Cog):
                     help_help += f'**{command}** - {command.help}\n'
 
             helptxt = f'\n{help_music}\n{help_help}\n{help_random}'
-            helptxt += f'\n\n使用 {config.BOT_PREFIX}help "command" 獲取更多指令資訊.'
+            helptxt += f'\n\n使用 {self.__config.BOT_PREFIX}help "command" 獲取更多指令資訊.'
             embedhelp = Embed(
                 title=f'**{self.__bot.user.name} 的指令列表**',
                 description=helptxt,
