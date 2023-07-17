@@ -69,7 +69,7 @@ class ControlCog(Cog):
             helptxt = f'\n{help_music}\n{help_help}\n{help_random}'
             helptxt += f'\n\nType {self.__config.BOT_PREFIX}help "command" for more information about the command chosen'
             embedhelp = Embed(
-                title=f'**Available Commands of {self.__bot.user.name}**',
+                title=f'**{self.__bot.user.name} 的指令列表**',
                 description=helptxt,
                 colour=self.__colors.BLUE
             )
