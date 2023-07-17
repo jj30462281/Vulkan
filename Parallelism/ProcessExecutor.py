@@ -73,14 +73,6 @@ class ProcessCommandsExecutor:
                        textChannel, guildID, MessagesCategory.PLAYER, "Stop"))
         buttons.append(HandlerButton(bot, SkipHandler, cls.EMOJIS.SKIP,
                        textChannel, guildID, MessagesCategory.PLAYER, "Skip"))
-        buttons.append(HandlerButton(bot, QueueHandler, cls.EMOJIS.QUEUE,
-                       textChannel, guildID, MessagesCategory.QUEUE, "Songs"))
-        buttons.append(HandlerButton(bot, LoopHandler, cls.EMOJIS.LOOP_ONE,
-                       textChannel, guildID, MessagesCategory.LOOP, "Loop One", 'One'))
-        buttons.append(HandlerButton(bot, LoopHandler, cls.EMOJIS.LOOP_OFF,
-                       textChannel, guildID, MessagesCategory.LOOP, "Loop Off", 'Off'))
-        buttons.append(HandlerButton(bot, LoopHandler, cls.EMOJIS.LOOP_ALL,
-                       textChannel, guildID, MessagesCategory.LOOP, "Loop All", 'All'))
 
         return buttons
 
@@ -111,22 +103,14 @@ class ProcessCommandsExecutor:
         buttons: List[Button] = []
 
         buttons.append(HandlerButton(self.__bot, PrevHandler, self.__emojis.BACK,
-                                     textChannel, self.__guildID, MessagesCategory.PLAYER, "Back"))
+                                     textChannel, self.__guildID, MessagesCategory.PLAYER, "上一首"))
         buttons.append(HandlerButton(self.__bot, PauseHandler, self.__emojis.PAUSE,
-                                     textChannel, self.__guildID, MessagesCategory.PLAYER, "Pause"))
+                                     textChannel, self.__guildID, MessagesCategory.PLAYER, "暫停"))
         buttons.append(HandlerButton(self.__bot, ResumeHandler, self.__emojis.PLAY,
-                                     textChannel, self.__guildID, MessagesCategory.PLAYER, "Play"))
+                                     textChannel, self.__guildID, MessagesCategory.PLAYER, "播放"))
         buttons.append(HandlerButton(self.__bot, StopHandler, self.__emojis.STOP,
-                                     textChannel, self.__guildID, MessagesCategory.PLAYER, "Stop"))
+                                     textChannel, self.__guildID, MessagesCategory.PLAYER, "停止"))
         buttons.append(HandlerButton(self.__bot, SkipHandler, self.__emojis.SKIP,
-                                     textChannel, self.__guildID, MessagesCategory.PLAYER, "Skip"))
-        buttons.append(HandlerButton(self.__bot, QueueHandler, self.__emojis.QUEUE,
-                                     textChannel, self.__guildID, MessagesCategory.QUEUE, "Songs"))
-        buttons.append(HandlerButton(self.__bot, LoopHandler, self.__emojis.LOOP_ONE,
-                                     textChannel, self.__guildID, MessagesCategory.LOOP, "Loop One", 'One'))
-        buttons.append(HandlerButton(self.__bot, LoopHandler, self.__emojis.LOOP_OFF,
-                                     textChannel, self.__guildID, MessagesCategory.LOOP, "Loop Off", 'Off'))
-        buttons.append(HandlerButton(self.__bot, LoopHandler, self.__emojis.LOOP_ALL,
-                                     textChannel, self.__guildID, MessagesCategory.LOOP, "Loop All", 'All'))
+                                     textChannel, self.__guildID, MessagesCategory.PLAYER, "跳過"))
 
         return buttons

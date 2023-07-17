@@ -8,46 +8,46 @@ class Messages(Singleton):
         if not super().created:
             self.__emojis = VEmojis()
             configs = VConfigs()
-            self.STARTUP_MESSAGE = 'Starting Vulkan...'
-            self.STARTUP_COMPLETE_MESSAGE = 'Vulkan is now operating.'
+            self.STARTUP_MESSAGE = '正在開啟 Vulkan...'
+            self.STARTUP_COMPLETE_MESSAGE = 'Vulkan 已經上線!'
 
-            self.SONGINFO_UPLOADER = "Uploader: "
-            self.SONGINFO_DURATION = "Duration: "
-            self.SONGINFO_REQUESTER = 'Requester: '
-            self.SONGINFO_POSITION = 'Position: '
+            self.SONGINFO_UPLOADER = "上傳者: "
+            self.SONGINFO_DURATION = "歌曲時長: "
+            self.SONGINFO_REQUESTER = '指令使用者: '
+            self.SONGINFO_POSITION = '在列表位置: '
 
-            self.VOLUME_CHANGED = 'Song volume changed to `{}`%'
-            self.SONGS_ADDED = 'Downloading `{}` songs to add to the queue'
-            self.SONG_ADDED = 'Downloading the song `{}` to add to the queue'
-            self.SONG_ADDED_TWO = f'{self.__emojis.MUSIC} Song added to the queue'
-            self.SONG_PLAYING = f'{self.__emojis.MUSIC} Song playing now'
-            self.SONG_PLAYER = f'{self.__emojis.MUSIC} Song Player'
-            self.QUEUE_TITLE = f'{self.__emojis.MUSIC} Songs in Queue'
-            self.ONE_SONG_LOOPING = f'{self.__emojis.MUSIC} Looping One Song'
-            self.ALL_SONGS_LOOPING = f'{self.__emojis.MUSIC} Looping All Songs'
-            self.SONG_PAUSED = f'{self.__emojis.PAUSE} Song paused'
-            self.SONG_RESUMED = f'{self.__emojis.PLAY} Song playing'
-            self.SONG_SKIPPED = f'{self.__emojis.SKIP} Song skipped'
+            self.VOLUME_CHANGED = '聲音大小已切換至 `{}`%'
+            self.SONGS_ADDED = '正在下載 `{}` 個歌至列表中'
+            self.SONG_ADDED = '正在下載 `{}` 至列表中'
+            self.SONG_ADDED_TWO = f'{self.__emojis.MUSIC} 歌曲已添加至列表!'
+            self.SONG_PLAYING = f'{self.__emojis.MUSIC} 歌曲正在播放'
+            self.SONG_PLAYER = f'{self.__emojis.MUSIC} 播放器狀態:'
+            self.QUEUE_TITLE = f'{self.__emojis.MUSIC} 歌曲列表'
+            self.ONE_SONG_LOOPING = f'{self.__emojis.MUSIC} 正在單曲循環'
+            self.ALL_SONGS_LOOPING = f'{self.__emojis.MUSIC} 正在列表循環'
+            self.SONG_PAUSED = f'{self.__emojis.PAUSE} 已暫停'
+            self.SONG_RESUMED = f'{self.__emojis.PLAY} 繼續播放'
+            self.SONG_SKIPPED = f'{self.__emojis.SKIP} 已跳過'
             self.RETURNING_SONG = f'{self.__emojis.BACK} Playing previous song'
-            self.STOPPING = f'{self.__emojis.STOP} Player Stopped'
-            self.EMPTY_QUEUE = f'{self.__emojis.QUEUE} Song queue is empty, use {configs.BOT_PREFIX}play to add new songs'
-            self.SONG_DOWNLOADING = f'{self.__emojis.DOWNLOADING} Downloading...'
-            self.PLAYLIST_CLEAR = f'{self.__emojis.MUSIC} Playlist is now empty'
+            self.STOPPING = f'{self.__emojis.STOP} 已停止'
+            self.EMPTY_QUEUE = f'{self.__emojis.QUEUE} 歌曲列表是空的, 使用 {configs.BOT_PREFIX}play 來添加更多歌曲'
+            self.SONG_DOWNLOADING = f'{self.__emojis.DOWNLOADING} 正在下載...'
+            self.PLAYLIST_CLEAR = f'{self.__emojis.MUSIC} 已清空播放列表'
 
-            self.HISTORY_TITLE = f'{self.__emojis.MUSIC} Played Songs'
-            self.HISTORY_EMPTY = f'{self.__emojis.QUEUE} There is no musics in history'
+            self.HISTORY_TITLE = f'{self.__emojis.MUSIC} 歷史紀錄'
+            self.HISTORY_EMPTY = f'{self.__emojis.QUEUE} 目前尚無歌曲在歷史紀錄中'
 
-            self.SONG_MOVED_SUCCESSFULLY = 'Song `{}` in position `{}` moved to the position `{}` successfully'
-            self.SONG_REMOVED_SUCCESSFULLY = 'Song `{}` removed successfully'
+            self.SONG_MOVED_SUCCESSFULLY = '`{}` 成功從 `第{}首` 移動至了 `第{}首`'
+            self.SONG_REMOVED_SUCCESSFULLY = '`{}` 已被從列表中移除'
 
             self.LOOP_ALL_ON = f'{self.__emojis.ERROR} Vulkan is looping all songs, use {configs.BOT_PREFIX}loop off to disable this loop first'
             self.LOOP_ONE_ON = f'{self.__emojis.ERROR} Vulkan is looping one song, use {configs.BOT_PREFIX}loop off to disable this loop first'
-            self.LOOP_ALL_ALREADY_ON = f'{self.__emojis.LOOP_ALL} Vulkan is already looping all songs'
-            self.LOOP_ONE_ALREADY_ON = f'{self.__emojis.LOOP_ONE} Vulkan is already looping the current song'
-            self.LOOP_ALL_ACTIVATE = f'{self.__emojis.LOOP_ALL} Looping all songs'
-            self.LOOP_ONE_ACTIVATE = f'{self.__emojis.LOOP_ONE} Looping the current song'
-            self.LOOP_DISABLE = f'{self.__emojis.LOOP_OFF} Loop disabled'
-            self.LOOP_ALREADY_DISABLE = f'{self.__emojis.ERROR} Loop is already disabled'
+            self.LOOP_ALL_ALREADY_ON = f'{self.__emojis.LOOP_ALL} Vulkan 已經正在循環列表歌曲了'
+            self.LOOP_ONE_ALREADY_ON = f'{self.__emojis.LOOP_ONE} Vulkan 已經正在循環當前歌曲了'
+            self.LOOP_ALL_ACTIVATE = f'{self.__emojis.LOOP_ALL} 正在循環列表歌曲'
+            self.LOOP_ONE_ACTIVATE = f'{self.__emojis.LOOP_ONE} 正在循環當前歌曲'
+            self.LOOP_DISABLE = f'{self.__emojis.LOOP_OFF} 已停止循環'
+            self.LOOP_ALREADY_DISABLE = f'{self.__emojis.ERROR} 循環已經停止了'
             self.LOOP_ON = f'{self.__emojis.ERROR} This command cannot be invoked with any loop activated. Use {configs.BOT_PREFIX}loop off to disable loop'
             self.BAD_USE_OF_LOOP = f"""{self.__emojis.ERROR} Invalid arguments of Loop command. Use {configs.BOT_PREFIX}help loop to more information.
                                 -> Available Arguments: ["all", "off", "one", ""]"""
@@ -62,12 +62,12 @@ class Messages(Singleton):
             self.COMMAND_NOT_FOUND = f'{self.__emojis.ERROR} Command not found, type {configs.BOT_PREFIX}help to see all commands'
             self.UNKNOWN_ERROR = f'{self.__emojis.ERROR} Unknown Error, if needed, use {configs.BOT_PREFIX}reset to reset the player of your server'
             self.ERROR_MISSING_ARGUMENTS = f'{self.__emojis.ERROR} Missing arguments in this command. Type {configs.BOT_PREFIX}help "command" to see more info about this command'
-            self.NOT_PREVIOUS = f'{self.__emojis.ERROR} There is none previous song to play'
+            self.NOT_PREVIOUS = f'{self.__emojis.ERROR} 沒有上一首歌曲了'
             self.PLAYER_NOT_PLAYING = f'{self.__emojis.ERROR} No song playing. Use {configs.BOT_PREFIX}play to start the player'
-            self.IMPOSSIBLE_MOVE = 'That is impossible :('
+            self.IMPOSSIBLE_MOVE = '執行無效 :('
             self.ERROR_TITLE = 'Error :-('
             self.COMMAND_NOT_FOUND_TITLE = 'This is strange :-('
-            self.NO_CHANNEL = 'To play some music, connect to any voice channel first.'
+            self.NO_CHANNEL = '播放音樂前請先進入一個語音頻道當中.'
             self.NO_GUILD = f'This server does not has a Player, try {configs.BOT_PREFIX}reset'
             self.INVALID_INPUT = f'This URL was too strange, try something better or type {configs.BOT_PREFIX}help play'
             self.INVALID_INDEX = f'Invalid index passed as argument.'
@@ -98,12 +98,12 @@ class SearchMessages(Singleton):
 class SpotifyMessages(Singleton):
     def __init__(self) -> None:
         if not super().created:
-            self.INVALID_SPOTIFY_URL = 'Invalid Spotify URL, verify your link.'
-            self.GENERIC_TITLE = 'URL could not be processed'
+            self.INVALID_SPOTIFY_URL = '無效的 Spotify 連結, 請檢查.'
+            self.GENERIC_TITLE = '連結無法正常使用'
 
 
 class DeezerMessages(Singleton):
     def __init__(self) -> None:
         if not super().created:
-            self.INVALID_DEEZER_URL = 'Invalid Deezer URL, verify your link.'
-            self.GENERIC_TITLE = 'URL could not be processed'
+            self.INVALID_DEEZER_URL = '無效的 Deezer 連結, 請檢查.'
+            self.GENERIC_TITLE = '連結無法正常使用'
