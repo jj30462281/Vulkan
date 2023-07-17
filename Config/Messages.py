@@ -65,7 +65,7 @@ class Messages(Singleton):
             self.NOT_PREVIOUS = f'{self.__emojis.ERROR} 沒有上一首歌曲了'
             self.PLAYER_NOT_PLAYING = f'{self.__emojis.ERROR} No song playing. Use {configs.BOT_PREFIX}play to start the player'
             self.IMPOSSIBLE_MOVE = '執行無效 :('
-            self.ERROR_TITLE = 'Error :-('
+            self.ERROR_TITLE = '錯誤 :-('
             self.COMMAND_NOT_FOUND_TITLE = 'This is strange :-('
             self.NO_CHANNEL = '播放音樂前請先進入一個語音頻道當中.'
             self.NO_GUILD = f'This server does not has a Player, try {configs.BOT_PREFIX}reset'
