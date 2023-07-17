@@ -52,9 +52,9 @@ class ControlCog(Cog):
         else:
 
             helptxt = ''
-            help_music = '🎧 `MUSIC`\n'
-            help_random = '🎲 `RANDOM`\n'
-            help_help = '👾 `HELP`\n'
+            help_music = '🎧 `音樂`\n'
+            help_random = '🎲 `隨機`\n'
+            help_help = '👾 `實用`\n'
 
             for command in self.__bot.commands:
                 if command.name in self.__commands['MUSIC']:
@@ -67,7 +67,7 @@ class ControlCog(Cog):
                     help_help += f'**{command}** - {command.help}\n'
 
             helptxt = f'\n{help_music}\n{help_help}\n{help_random}'
-            helptxt += f'\n\nType {self.__config.BOT_PREFIX}help "command" for more information about the command chosen'
+            helptxt += f'\n\n使用 {config.BOT_PREFIX}help "command" 獲取更多指令資訊.'
             embedhelp = Embed(
                 title=f'**{self.__bot.user.name} 的指令列表**',
                 description=helptxt,
