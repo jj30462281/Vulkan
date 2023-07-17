@@ -107,7 +107,7 @@ class ProcessCommandsExecutor:
         buttons.append(HandlerButton(self.__bot, PauseHandler, self.__emojis.PAUSE,
                                      textChannel, self.__guildID, MessagesCategory.PLAYER, "暫停"))
         buttons.append(HandlerButton(self.__bot, ResumeHandler, self.__emojis.PLAY,
-                                     textChannel, self.__guildID, MessagesCategory.PLAYER, "播放"))
+                                     textChannel, self.__guildID, MessagesCategory.PLAYER, "繼續"))
         buttons.append(HandlerButton(self.__bot, StopHandler, self.__emojis.STOP,
                                      textChannel, self.__guildID, MessagesCategory.PLAYER, "停止"))
         buttons.append(HandlerButton(self.__bot, SkipHandler, self.__emojis.SKIP,
